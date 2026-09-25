@@ -21,7 +21,26 @@ body { margin: 0; background: #10182b; font-family: Inter, "Avenir Next", Avenir
   .bg-topography {
     background-image: repeating-radial-gradient(ellipse at 75% 55%, transparent 0, transparent 42px, rgba(216,195,165,.55) 43px, transparent 44px);
   }
+  .bg-indian-grid {
+    background-image: linear-gradient(45deg, rgba(16,24,43,.12) 1px, transparent 1px), linear-gradient(-45deg, rgba(16,24,43,.12) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
 }
+
+.indic-display { font-family: "Kohinoor Devanagari", "Devanagari Sangam MN", "Noto Sans Devanagari", sans-serif; }
+.editorial-display { font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif; }
+
+.layer-line { stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.layer-one { stroke: rgba(114,151,255,.2); }
+.layer-two { stroke: rgba(216,195,165,.2); }
+.layer-three { stroke: rgba(114,151,255,.35); }
+.layer-four { stroke: rgba(216,195,165,.4); }
+.layer-five { stroke: rgba(201,134,50,.75); filter: drop-shadow(0 0 24px rgba(201,134,50,.18)); }
+
+.architectural-rule { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 18px; }
+.architectural-rule span { height: 1px; background: rgba(16,24,43,.25); }
+.architectural-rule i { display: block; width: 14px; height: 14px; border: 1px solid rgba(16,24,43,.45); transform: rotate(45deg); }
+.stepwell-corner { position: absolute; width: 220px; height: 220px; opacity: .12; background: linear-gradient(135deg, transparent 0 25%, #10182b 25% 27%, transparent 27% 38%, #10182b 38% 40%, transparent 40% 51%, #10182b 51% 53%, transparent 53%); }
 
 .signal { position: absolute; height: 6px; width: 6px; border-radius: 999px; background: #7297ff; box-shadow: 0 0 18px rgba(114,151,255,.9); }
 .signal-one { left: 12%; top: 26%; animation: pulse 3.4s ease-in-out infinite; }

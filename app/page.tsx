@@ -25,11 +25,13 @@ function KoshamMark({ compact = false }: { compact?: boolean }) {
 function LayeredCore() {
   return (
     <div className="relative aspect-square w-full max-w-[620px]" aria-label="Five connected layers resolving into one protected core">
-      <div className="absolute inset-[4%] rotate-45 border border-signal/20" />
-      <div className="absolute inset-[12%] rotate-45 border border-sandstone/20" />
-      <div className="absolute inset-[20%] rotate-45 border border-signal/35" />
-      <div className="absolute inset-[28%] rotate-45 border border-sandstone/40" />
-      <div className="absolute inset-[36%] rotate-45 border border-gold/65 shadow-[0_0_60px_rgba(201,134,50,0.16)]" />
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 620 620" fill="none" aria-hidden="true">
+        <path className="layer-line layer-one" d="M64 64h138V38h216v26h138v138h26v216h-26v138H418v26H202v-26H64V418H38V202h26V64Z" />
+        <path className="layer-line layer-two" d="M112 112h116V86h164v26h116v116h26v164h-26v116H392v26H228v-26H112V392H86V228h26V112Z" />
+        <path className="layer-line layer-three" d="M160 160h92v-24h116v24h92v92h24v116h-24v92h-92v24H252v-24h-92v-92h-24V252h24v-92Z" />
+        <path className="layer-line layer-four" d="M208 208h68v-22h68v22h68v68h22v68h-22v68h-68v22h-68v-22h-68v-68h-22v-68h22v-68Z" />
+        <path className="layer-line layer-five" d="M252 252h38v-18h40v18h38v38h18v40h-18v38h-38v18h-40v-18h-38v-38h-18v-40h18v-38Z" />
+      </svg>
       <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-ivory shadow-[0_0_30px_rgba(114,151,255,0.8)]" />
 
       <div className="signal signal-one" />
@@ -50,7 +52,10 @@ export default function Home() {
         <div className="absolute -right-28 -top-20 h-96 w-96 rounded-full bg-gold/10 blur-[150px]" />
 
         <nav className="relative z-10 mx-auto flex max-w-[1440px] items-center justify-between px-6 py-6 sm:px-10 lg:px-16" aria-label="Primary navigation">
-          <a href="#top" className="text-ivory"><KoshamMark /></a>
+          <div className="flex items-center">
+            <a href="#top" className="text-ivory"><KoshamMark /></a>
+            <span className="indic-display ml-5 hidden border-l border-white/15 pl-5 text-sm text-sandstone/70 sm:block">कोशम्</span>
+          </div>
           <div className="hidden items-center gap-8 text-xs font-medium uppercase tracking-[0.15em] text-ivory/55 md:flex">
             <a className="transition hover:text-ivory" href="#platform">Platform</a>
             <a className="transition hover:text-ivory" href="#capabilities">Capabilities</a>
@@ -73,7 +78,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto flex max-w-[1440px] flex-wrap justify-between gap-5 border-t border-white/10 px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-ivory/40 sm:px-10 lg:px-16">
-          <span>Physical world intelligence</span><span>Persistent entity history</span><span>Built in India</span>
+          <span>Physical world intelligence</span><span>Persistent entity history</span><span>Built for India</span>
         </div>
       </section>
 
@@ -132,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="capabilities" className="bg-sandstone px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
+      <section id="capabilities" className="bg-ivory px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-8 lg:grid-cols-2">
             <div><p className="eyebrow text-deep"><span className="h-px w-8 bg-night" /> Five layers. One system.</p><h2 className="mt-7 max-w-2xl text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Every layer.<br />One mission.</h2></div>
@@ -140,7 +145,7 @@ export default function Home() {
           </div>
           <div className="mt-20 border-t border-night/20">
             {layers.map((layer) => (
-              <article className="grid gap-5 border-b border-night/20 py-7 transition-colors hover:bg-ivory/20 sm:grid-cols-[80px_1fr_1.1fr] sm:items-center sm:px-4" key={layer.name}>
+              <article className="grid gap-5 border-b border-night/20 py-7 transition-colors hover:bg-sandstone/20 sm:grid-cols-[80px_1fr_1.1fr] sm:items-center sm:px-4" key={layer.name}>
                 <span className="text-xs font-bold tracking-[0.2em] text-deep/45">{layer.number}</span>
                 <h3 className="text-2xl font-semibold tracking-[-0.035em]">{layer.name}</h3>
                 <p className="max-w-xl text-sm leading-6 text-deep/65">{layer.detail}</p>
@@ -150,13 +155,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="relative overflow-hidden bg-sandstone px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
+        <div className="stepwell-corner left-0 top-0 rotate-180" aria-hidden="true" />
+        <div className="stepwell-corner bottom-0 right-0" aria-hidden="true" />
+        <div className="mx-auto max-w-[1320px]">
+          <div className="architectural-rule"><span /><i /><span /></div>
+          <div className="relative mt-14 grid gap-16 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="eyebrow text-deep"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Built for India</p>
+              <h2 className="editorial-display mt-7 text-5xl leading-[.98] tracking-[-0.045em] sm:text-7xl">Indian in construction.<br /><span className="text-deep/45">Global in execution.</span></h2>
+              <p className="mt-8 max-w-xl text-base leading-7 text-deep/68">Built for India’s infrastructure, terrain, and operating realities—from dense industrial corridors to distributed critical sites and sovereign networks.</p>
+            </div>
+            <div className="relative flex min-h-[430px] items-center justify-center border border-night/15 bg-[#cfb48f] p-8">
+              <div className="absolute inset-5 border border-night/10" />
+              <div className="absolute inset-10 border border-night/10" />
+              <div className="absolute inset-0 bg-indian-grid opacity-30" />
+              <div className="relative text-center">
+                <p className="indic-display text-[clamp(3.2rem,6.5vw,6.8rem)] font-medium leading-[1.05] tracking-[-0.055em]">सत्यमेव जयते</p>
+                <div className="mx-auto my-8 flex max-w-xs items-center gap-4"><span className="h-px flex-1 bg-night/30" /><span className="h-3 w-3 rotate-45 border border-night/50" /><span className="h-px flex-1 bg-night/30" /></div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-deep/55">Truth alone triumphs</p>
+              </div>
+            </div>
+          </div>
+          <div className="architectural-rule mt-14 rotate-180"><span /><i /><span /></div>
+        </div>
+      </section>
+
       <section id="mission" className="relative overflow-hidden border-b border-white/10 px-6 py-28 sm:px-10 lg:px-16 lg:py-40">
         <div className="absolute left-1/2 top-1/2 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 rotate-45 border border-signal/10" />
         <div className="absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rotate-45 border border-gold/10" />
         <div className="relative mx-auto max-w-5xl text-center">
           <p className="eyebrow justify-center"><span className="h-px w-8 bg-gold" /> कोशम् · Built for sovereign capability</p>
           <h2 className="mt-8 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.055em] sm:text-7xl">A unified intelligence layer for the physical world.</h2>
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-ivory/58">Designed in India for institutions that protect essential infrastructure—and built to turn fragmented observations into one trusted operational picture.</p>
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-ivory/58">Built for India’s institutions and essential infrastructure—and designed to turn fragmented observations into one trusted operational picture.</p>
           <a className="mt-10 inline-block bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.15em] text-night transition hover:bg-sandstone" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Start a conversation <span aria-hidden="true">↗</span></a>
         </div>
       </section>

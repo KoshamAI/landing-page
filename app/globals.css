@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #10182b; font-family: Inter, "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif; }
+* { box-sizing: border-box; }
+::selection { background: #7297ff; color: #10182b; }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .eyebrow { @apply flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.22em] text-ivory/50; }
+  .bg-grid {
+    background-image: linear-gradient(rgba(244,240,231,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(244,240,231,.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .bg-map-grid {
+    background-image: linear-gradient(rgba(114,151,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(114,151,255,.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .bg-topography {
+    background-image: repeating-radial-gradient(ellipse at 75% 55%, transparent 0, transparent 42px, rgba(216,195,165,.55) 43px, transparent 44px);
+  }
+}
+
+.signal { position: absolute; height: 6px; width: 6px; border-radius: 999px; background: #7297ff; box-shadow: 0 0 18px rgba(114,151,255,.9); }
+.signal-one { left: 12%; top: 26%; animation: pulse 3.4s ease-in-out infinite; }
+.signal-two { right: 14%; top: 38%; animation: pulse 3.4s .8s ease-in-out infinite; }
+.signal-three { bottom: 16%; left: 34%; animation: pulse 3.4s 1.6s ease-in-out infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: .25; transform: scale(.7); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .signal { animation: none; }
+}

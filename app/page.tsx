@@ -8,6 +8,18 @@ const layers = [
 
 const workflow = ["Observe", "Connect", "Understand", "Decide", "Act"];
 
+const queries = [
+  "Which vehicles appeared at both Site 04 and Site 11 this month?",
+  "Show unknown vehicles that returned after midnight this week.",
+  "Where else has entity K-2741 been observed?",
+];
+
+const communityOutcomes = [
+  { number: "01", title: "Detect earlier", detail: "Identify repeat perimeter activity before it becomes an incident." },
+  { number: "02", title: "Respond with context", detail: "Give security teams the relevant history when an incident is underway." },
+  { number: "03", title: "Investigate across sites", detail: "Reconstruct movement across locations and share evidence when coordination is required." },
+];
+
 function KoshamMark({ compact = false }: { compact?: boolean }) {
   return (
     <span className="inline-flex items-center gap-3" aria-label="Kosham">
@@ -43,6 +55,68 @@ function LayeredCore() {
   );
 }
 
+function OntologyGraph() {
+  return (
+    <div className="relative overflow-hidden border border-white/15 bg-night p-4 sm:p-7" aria-label="Ontology graph linking a vehicle to sites, events, routes, and an organization">
+      <div className="flex items-center justify-between border-b border-white/10 pb-4 text-[10px] uppercase tracking-[0.18em] text-ivory/40"><span>Entity graph / K-2741</span><span className="text-signal">6 linked records</span></div>
+      <svg className="mt-4 h-auto w-full" viewBox="0 0 760 510" fill="none" role="img" aria-label="Vehicle K-2741 connected to Site 04, Site 11, Route NH48, Event 1842, and organization Northline Logistics">
+        <g stroke="#7297FF" strokeOpacity=".38" strokeWidth="1.3">
+          <path d="M380 254 168 124" />
+          <path d="M380 254 596 104" />
+          <path d="M380 254 634 302" />
+          <path d="M380 254 504 432" />
+          <path d="M380 254 170 408" />
+          <path d="M168 124 596 104" strokeDasharray="5 7" strokeOpacity=".18" />
+          <path d="M634 302 504 432" strokeDasharray="5 7" strokeOpacity=".18" />
+        </g>
+
+        <g fill="#10182B" stroke="#D8C3A5" strokeOpacity=".35">
+          <rect x="90" y="82" width="156" height="84" />
+          <rect x="518" y="62" width="156" height="84" />
+          <rect x="556" y="260" width="156" height="84" />
+          <rect x="426" y="390" width="156" height="84" />
+          <rect x="72" y="366" width="196" height="84" />
+        </g>
+
+        <g fontFamily="Inter, Arial, sans-serif">
+          <text x="112" y="108" fill="#7297FF" fontSize="10" letterSpacing="2">LOCATION</text>
+          <text x="112" y="139" fill="#F4F0E7" fontSize="17">Site 04</text>
+          <text x="540" y="88" fill="#7297FF" fontSize="10" letterSpacing="2">LOCATION</text>
+          <text x="540" y="119" fill="#F4F0E7" fontSize="17">Site 11</text>
+          <text x="578" y="286" fill="#C98632" fontSize="10" letterSpacing="2">EVENT</text>
+          <text x="578" y="317" fill="#F4F0E7" fontSize="17">Event 1842</text>
+          <text x="448" y="416" fill="#7297FF" fontSize="10" letterSpacing="2">ROUTE</text>
+          <text x="448" y="447" fill="#F4F0E7" fontSize="17">NH48</text>
+          <text x="94" y="392" fill="#C98632" fontSize="10" letterSpacing="2">ORGANIZATION</text>
+          <text x="94" y="423" fill="#F4F0E7" fontSize="16">Northline Logistics</text>
+        </g>
+
+        <g>
+          <circle cx="380" cy="254" r="79" fill="#16213A" stroke="#7297FF" strokeWidth="1.5" />
+          <circle cx="380" cy="254" r="64" stroke="#7297FF" strokeOpacity=".2" />
+          <rect x="373" y="247" width="14" height="14" transform="rotate(45 380 254)" fill="#F4F0E7" />
+          <text x="380" y="212" textAnchor="middle" fill="#7297FF" fontFamily="Inter, Arial, sans-serif" fontSize="10" letterSpacing="2">VEHICLE</text>
+          <text x="380" y="301" textAnchor="middle" fill="#F4F0E7" fontFamily="Inter, Arial, sans-serif" fontSize="18">K-2741</text>
+        </g>
+
+        <g fill="#D8C3A5" fontFamily="Inter, Arial, sans-serif" fontSize="8" letterSpacing="1.2">
+          <text x="242" y="166">OBSERVED AT</text>
+          <text x="472" y="161">RETURNED TO</text>
+          <text x="505" y="268">GENERATED</text>
+          <text x="423" y="353">TRAVELLED VIA</text>
+          <text x="206" y="326">ASSOCIATED WITH</text>
+        </g>
+      </svg>
+      <div className="grid grid-cols-2 gap-px border border-white/10 bg-white/10 text-[9px] uppercase tracking-[0.15em] text-ivory/45 sm:grid-cols-4">
+        <span className="bg-night px-3 py-3">Entity resolved</span>
+        <span className="bg-night px-3 py-3">Sources retained</span>
+        <span className="bg-night px-3 py-3">Links queryable</span>
+        <span className="bg-night px-3 py-3">History persistent</span>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main className="bg-night text-ivory">
@@ -67,8 +141,8 @@ export default function Home() {
         <div className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] max-w-[1440px] items-center gap-10 px-6 pb-16 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-16">
           <div className="max-w-3xl pt-16 lg:pt-0">
             <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Perimeter intelligence</p>
-            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Know what’s moving around <span className="text-sandstone">what matters.</span></h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham links distributed sensors to track vehicles and other entities across sites, roads, and time.</p>
+            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">See what moves around <span className="text-sandstone">your critical sites.</span></h1>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham connects sensor observations across locations, building a continuous history of vehicles and other entities.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Request a briefing <span aria-hidden="true">↗</span></a>
               <a className="border border-white/20 px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition hover:border-white/60" href="#platform">Explore the system <span aria-hidden="true">↓</span></a>
@@ -86,7 +160,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px]">
           <p className="eyebrow text-deep"><span className="h-px w-8 bg-gold" /> From observation to action</p>
           <div className="mt-8 grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-            <h2 className="max-w-4xl text-4xl font-medium leading-[1.06] tracking-[-0.045em] sm:text-6xl">Cameras record footage.<br />Kosham connects <span className="text-deep/45">the evidence.</span></h2>
+            <h2 className="max-w-4xl text-4xl font-medium leading-[1.06] tracking-[-0.045em] sm:text-6xl">Cameras record events.<br />Kosham builds <span className="text-deep/45">understanding.</span></h2>
             <p className="max-w-lg text-base leading-7 text-deep/65">Most camera footage is isolated by site and timestamp. Kosham links repeat observations so teams can trace vehicles, find associations, and review activity outside the gate.</p>
           </div>
 
@@ -137,7 +211,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="capabilities" className="bg-ivory px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
+      <section className="border-b border-night/10 bg-ivory px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
+        <div className="mx-auto grid max-w-[1320px] gap-16 lg:grid-cols-[.82fr_1.18fr] lg:items-center">
+          <div>
+            <p className="eyebrow text-deep"><span className="h-px w-8 bg-signal" /> AI-driven decision-making</p>
+            <h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Ask a question.<br />Trace the answer.</h2>
+            <p className="mt-7 max-w-xl text-base leading-7 text-deep/65">Operators can query observations in plain language. Kosham searches entity histories, locations, and time windows, then returns the records behind the answer.</p>
+          </div>
+
+          <div className="border border-night/15 bg-night p-4 text-ivory shadow-[0_24px_70px_rgba(16,24,43,.18)] sm:p-6">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4 text-[10px] uppercase tracking-[0.18em] text-ivory/40"><span>Kosham query</span><span className="flex items-center gap-2 text-signal"><span className="h-1.5 w-1.5 rounded-full bg-signal" /> Evidence linked</span></div>
+            <div className="mt-5 border border-signal/35 bg-signal/[.06] p-5">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-signal">Current query</p>
+              <p className="mt-3 text-lg leading-7">Which vehicles appeared at both Site 04 and Site 11 this month?</p>
+            </div>
+            <div className="mt-4 grid gap-3">
+              {queries.slice(1).map((query, index) => (
+                <div className="flex gap-4 border border-white/10 px-4 py-4 text-sm leading-6 text-ivory/58" key={query}>
+                  <span className="text-[10px] font-bold tracking-[0.15em] text-gold">0{index + 2}</span>
+                  <span>{query}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2 text-[9px] uppercase tracking-[0.16em] text-ivory/45">
+              <span className="border border-white/10 px-3 py-2">Entity history</span>
+              <span className="border border-white/10 px-3 py-2">Location</span>
+              <span className="border border-white/10 px-3 py-2">Time window</span>
+              <span className="border border-white/10 px-3 py-2">Source record</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-b border-white/10 bg-deep px-6 py-28 sm:px-10 lg:px-16 lg:py-36">
+        <div className="absolute inset-0 bg-topography opacity-[.05]" />
+        <div className="relative mx-auto grid max-w-[1320px] gap-16 lg:grid-cols-[.78fr_1.22fr] lg:items-center">
+          <div>
+            <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> The Kosham ontology</p>
+            <h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Data becomes useful when it has structure.</h2>
+            <p className="mt-7 max-w-xl text-base leading-7 text-ivory/60">Kosham maps observations to real-world entities and relationships. Vehicles, sites, organizations, routes, and events become part of one shared model instead of separate records.</p>
+            <p className="mt-5 max-w-xl text-sm leading-6 text-ivory/42">This structure lets operators follow an entity across systems, query its history, and trace every result back to the source.</p>
+          </div>
+          <OntologyGraph />
+        </div>
+      </section>
+
+      <section id="capabilities" className="bg-sandstone px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-8 lg:grid-cols-2">
             <div><p className="eyebrow text-deep"><span className="h-px w-8 bg-night" /> Five layers. One system.</p><h2 className="mt-7 max-w-2xl text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Every layer.<br />One mission.</h2></div>
@@ -145,7 +264,7 @@ export default function Home() {
           </div>
           <div className="mt-20 border-t border-night/20">
             {layers.map((layer) => (
-              <article className="grid gap-5 border-b border-night/20 py-7 transition-colors hover:bg-sandstone/20 sm:grid-cols-[80px_1fr_1.1fr] sm:items-center sm:px-4" key={layer.name}>
+              <article className="grid gap-5 border-b border-night/20 py-7 transition-colors hover:bg-ivory/20 sm:grid-cols-[80px_1fr_1.1fr] sm:items-center sm:px-4" key={layer.name}>
                 <span className="text-xs font-bold tracking-[0.2em] text-deep/45">{layer.number}</span>
                 <h3 className="text-2xl font-semibold tracking-[-0.035em]">{layer.name}</h3>
                 <p className="max-w-xl text-sm leading-6 text-deep/65">{layer.detail}</p>
@@ -155,7 +274,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-sandstone px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
+      <section className="relative overflow-hidden bg-ivory px-6 py-28 text-night sm:px-10 lg:px-16 lg:py-36">
         <div className="stepwell-corner left-0 top-0 rotate-180" aria-hidden="true" />
         <div className="stepwell-corner bottom-0 right-0" aria-hidden="true" />
         <div className="mx-auto max-w-[1320px]">
@@ -163,10 +282,10 @@ export default function Home() {
           <div className="relative mt-14 grid gap-16 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
             <div>
               <p className="eyebrow text-deep"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Built for India</p>
-              <h2 className="editorial-display mt-7 text-5xl leading-[.98] tracking-[-0.045em] sm:text-7xl">Designed for<br /><span className="text-deep/45">Indian conditions.</span></h2>
+              <h2 className="editorial-display mt-7 text-5xl leading-[.98] tracking-[-0.045em] sm:text-7xl">Designed<br /><span className="text-deep/45">for India.</span></h2>
               <p className="mt-8 max-w-xl text-base leading-7 text-deep/68">Deployments may span industrial corridors, dense cities, remote terrain, and disconnected networks. Kosham is designed for that range.</p>
             </div>
-            <div className="relative flex min-h-[430px] items-center justify-center border border-night/15 bg-[#cfb48f] p-8">
+            <div className="relative flex min-h-[430px] items-center justify-center border border-night/15 bg-sandstone p-8">
               <div className="absolute inset-5 border border-night/10" />
               <div className="absolute inset-10 border border-night/10" />
               <div className="absolute inset-0 bg-indian-grid opacity-30" />
@@ -181,12 +300,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-y border-white/10 bg-deep px-6 py-28 sm:px-10 lg:px-16 lg:py-36">
+        <div className="mx-auto max-w-[1320px]">
+          <div className="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Safer communities</p>
+              <h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Security does not stop at the perimeter.</h2>
+            </div>
+            <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Critical infrastructure is part of the community around it. Better perimeter awareness helps teams respond sooner, investigate with stronger evidence, and coordinate beyond a single site.</p>
+          </div>
+          <div className="mt-16 grid gap-px border border-white/10 bg-white/10 md:grid-cols-3">
+            {communityOutcomes.map((outcome) => (
+              <article className="bg-deep p-7 sm:p-9" key={outcome.title}>
+                <span className="text-[10px] font-bold tracking-[0.2em] text-gold">{outcome.number}</span>
+                <h3 className="mt-10 text-xl font-semibold tracking-[-0.03em]">{outcome.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-ivory/55">{outcome.detail}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="mission" className="relative overflow-hidden border-b border-white/10 px-6 py-28 sm:px-10 lg:px-16 lg:py-40">
         <div className="absolute left-1/2 top-1/2 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 rotate-45 border border-signal/10" />
         <div className="absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rotate-45 border border-gold/10" />
         <div className="relative mx-auto max-w-5xl text-center">
-          <p className="eyebrow justify-center"><span className="h-px w-8 bg-gold" /> कोशम् · A system India controls</p>
-          <h2 className="mt-8 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.055em] sm:text-7xl">One operating picture across sites, sensors, and systems.</h2>
+          <p className="eyebrow justify-center"><span className="h-px w-8 bg-gold" /> कोशम् · Built for sovereign capability</p>
+          <h2 className="mt-8 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.055em] sm:text-7xl">A unified intelligence layer for the physical world.</h2>
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-ivory/58">Kosham gives institutions a shared record of what was seen, where it moved, and how events connect.</p>
           <a className="mt-10 inline-block bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.15em] text-night transition hover:bg-sandstone" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Talk to us <span aria-hidden="true">↗</span></a>
         </div>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Kosham</title>
+  <desc id="desc">Kosham geometric mark with lowercase wordmark.</desc>
+  <g aria-hidden="true">
+    <path d="M20 2 38 20 20 38 2 20 20 2Z" stroke="#10182B" stroke-width="1.2"/>
+    <path d="m20 7 13 13-13 13L7 20 20 7Z" stroke="#10182B" stroke-width="1.2" opacity=".78"/>
+    <path d="m20 12 8 8-8 8-8-8 8-8Z" stroke="#10182B" stroke-width="1.2" opacity=".56"/>
+    <path d="m20 16 4 4-4 4-4-4 4-4Z" fill="#10182B"/>
+  </g>
+  <text x="51" y="27" fill="#10182B" font-family="Inter, 'Avenir Next', Avenir, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="-1.15">kosham</text>
+</svg>

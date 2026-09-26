@@ -7,13 +7,13 @@ const stages = [
     name: "Assets",
     label: "What exists",
     title: "Connect the physical assets already in the field.",
-    detail: "Bring cameras, sensors, vehicles, and installations into one governed system without replacing the infrastructure that already works.",
+    detail: "Bring cameras, sensors, vehicles, and installations into one system while keeping the infrastructure already in place.",
   },
   {
     name: "Perception",
     label: "What is seen",
     title: "Turn raw footage into usable observations.",
-    detail: "Detection and classification at the edge identify the vehicles and events that matter while retaining the underlying source evidence.",
+    detail: "Edge models detect and classify vehicles and events while preserving the source footage behind each observation.",
   },
   {
     name: "Networks",
@@ -24,8 +24,8 @@ const stages = [
   {
     name: "Intelligence",
     label: "What it means",
-    title: "Give every observation context.",
-    detail: "An ontology links vehicles, sites, organizations, routes, and events. Isolated detections become a persistent history teams can understand.",
+    title: "Connect each observation to the entity behind it.",
+    detail: "An ontology links vehicles, sites, organizations, routes, and events so operators can connect a detection to prior sightings and related records.",
   },
   {
     name: "Investigate",
@@ -175,8 +175,8 @@ export default function SystemLayers() {
       <div className="absolute inset-0 bg-topography opacity-[.05]" />
       <div className="relative mx-auto max-w-[1320px]">
         <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
-          <div><p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> One connected system</p><h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">From the field to the decision.</h2></div>
-          <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Five layers turn distributed sensor observations into intelligence an operator can act on.</p>
+          <div><p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> One connected system</p><h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">From sensors to investigation.</h2></div>
+          <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Five layers turn distributed observations into linked records that operators can search, trace, and verify.</p>
         </div>
 
         <div className="mt-14 overflow-x-auto border-y border-white/12" role="tablist" aria-label="Kosham system layers">

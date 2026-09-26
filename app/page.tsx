@@ -2,8 +2,8 @@ import SystemLayers from "./components/system-layers";
 
 const communityOutcomes = [
   { number: "01", title: "Detect earlier", detail: "Identify repeat perimeter activity before it becomes an incident." },
-  { number: "02", title: "Respond with context", detail: "Give security teams the relevant history when an incident is underway." },
-  { number: "03", title: "Investigate across sites", detail: "Reconstruct movement across locations and share evidence when coordination is required." },
+  { number: "02", title: "Respond with context", detail: "Give security teams prior sightings and related activity while an incident is underway." },
+  { number: "03", title: "Investigate across sites", detail: "Reconstruct movement across locations and share evidence with other response teams." },
 ];
 
 function KoshamMark({ compact = false }: { compact?: boolean }) {
@@ -65,7 +65,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] max-w-[1440px] items-center gap-10 px-6 pb-16 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-16">
           <div className="max-w-3xl pt-16 lg:pt-0">
             <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Perimeter intelligence</p>
-            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Know what&apos;s moving around <span className="text-sandstone">your critical assets.</span></h1>
+            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Understand what&apos;s moving around <span className="text-sandstone">your critical assets.</span></h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham links observations across cameras, sensors, and locations so teams can track vehicles, identify repeat activity, and investigate across sites.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Request a briefing <span aria-hidden="true">↗</span></a>
@@ -130,7 +130,7 @@ export default function Home() {
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
               <p className="eyebrow text-deep"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Built for India</p>
               <h2 className="editorial-display mt-6 text-5xl leading-[1.02] tracking-[-0.05em] sm:text-6xl">Designed for India.</h2>
-              <p className="mt-7 max-w-xl text-base leading-7 text-deep/68">Deployments may span industrial corridors, dense cities, remote terrain, and disconnected networks. Kosham is designed for that range.</p>
+              <p className="mt-7 max-w-xl text-base leading-7 text-deep/68">Deployments may span industrial corridors, dense cities, remote terrain, and disconnected networks. Kosham is built to operate across them.</p>
               <div className="mt-10 border-t border-night/15 pt-8">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">Built for sovereign capability</p>
                 <p className="mt-4 max-w-xl text-lg leading-7 text-deep/75">Technology developed for India&apos;s security requirements, infrastructure, and operating environment.</p>
@@ -157,7 +157,7 @@ export default function Home() {
               <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Safer communities</p>
               <h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Security does not stop at the perimeter.</h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Critical infrastructure is part of the community around it. Better perimeter awareness helps teams respond sooner, investigate with stronger evidence, and coordinate beyond a single site.</p>
+            <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Critical sites do not operate in isolation. Better perimeter awareness helps teams respond sooner, preserve evidence, and coordinate with nearby sites and response teams.</p>
           </div>
           <div className="mt-16 grid gap-px border border-white/10 bg-white/10 md:grid-cols-3">
             {communityOutcomes.map((outcome) => (

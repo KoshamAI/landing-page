@@ -65,8 +65,8 @@ export default function Home() {
         <div className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] max-w-[1440px] items-center gap-10 px-6 pb-16 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-16">
           <div className="max-w-3xl pt-16 lg:pt-0">
             <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Perimeter intelligence</p>
-            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">See what moves around <span className="text-sandstone">your critical sites.</span></h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham connects sensor observations across locations, building a continuous history of vehicles and other entities.</p>
+            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Know what&apos;s moving around <span className="text-sandstone">your critical assets.</span></h1>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham links observations across cameras, sensors, and locations so teams can track vehicles, identify repeat activity, and investigate across sites.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Request a briefing <span aria-hidden="true">↗</span></a>
               <a className="border border-white/20 px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition hover:border-white/60" href="#platform">Explore the system <span aria-hidden="true">↓</span></a>
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto flex max-w-[1440px] flex-wrap justify-between gap-5 border-t border-white/10 px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-ivory/40 sm:px-10 lg:px-16">
-          <span>Physical world intelligence</span><span>Persistent entity history</span><span>Built for India</span>
+          <span>Physical world intelligence</span><span>Built for India</span>
         </div>
       </section>
 

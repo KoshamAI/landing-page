@@ -1,9 +1,9 @@
 const layers = [
   { number: "01", name: "Assets", detail: "Sensors, vehicles, installations, and field hardware." },
-  { number: "02", name: "Networks", detail: "Live observations connected across sites and systems." },
-  { number: "03", name: "Perception", detail: "Detection, classification, and signal processing at the edge." },
-  { number: "04", name: "Intelligence", detail: "Entity histories, associations, and cross-site reasoning." },
-  { number: "05", name: "Command", detail: "One verified operational picture for decisive action." },
+  { number: "02", name: "Networks", detail: "Observations linked across sites and existing systems." },
+  { number: "03", name: "Perception", detail: "Detection and classification at the edge." },
+  { number: "04", name: "Intelligence", detail: "Entity histories, associations, and repeat activity across sites." },
+  { number: "05", name: "Command", detail: "A common operating picture for operators and command teams." },
 ];
 
 const workflow = ["Observe", "Connect", "Understand", "Decide", "Act"];
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="max-w-3xl pt-16 lg:pt-0">
             <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Perimeter intelligence</p>
             <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Know what’s moving around <span className="text-sandstone">what matters.</span></h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham turns distributed sensors into a persistent intelligence network—connecting vehicles and entities across sites, roads, and time.</p>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham links distributed sensors to track vehicles and other entities across sites, roads, and time.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Request a briefing <span aria-hidden="true">↗</span></a>
               <a className="border border-white/20 px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition hover:border-white/60" href="#platform">Explore the system <span aria-hidden="true">↓</span></a>
@@ -86,8 +86,8 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px]">
           <p className="eyebrow text-deep"><span className="h-px w-8 bg-gold" /> From observation to action</p>
           <div className="mt-8 grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-            <h2 className="max-w-4xl text-4xl font-medium leading-[1.06] tracking-[-0.045em] sm:text-6xl">Cameras record events.<br />Kosham builds <span className="text-deep/45">understanding.</span></h2>
-            <p className="max-w-lg text-base leading-7 text-deep/65">Raw footage is fragmented by site and time. Kosham resolves observations into persistent histories—revealing repeat appearances, associations, and activity beyond the controlled gate.</p>
+            <h2 className="max-w-4xl text-4xl font-medium leading-[1.06] tracking-[-0.045em] sm:text-6xl">Cameras record footage.<br />Kosham connects <span className="text-deep/45">the evidence.</span></h2>
+            <p className="max-w-lg text-base leading-7 text-deep/65">Most camera footage is isolated by site and timestamp. Kosham links repeat observations so teams can trace vehicles, find associations, and review activity outside the gate.</p>
           </div>
 
           <div className="mt-20 grid border-y border-night/15 md:grid-cols-5">
@@ -107,8 +107,8 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-[1320px] gap-16 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
           <div>
             <p className="eyebrow"><span className="h-1.5 w-1.5 bg-signal" /> One entity. Every encounter.</p>
-            <h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Context that compounds across every site.</h2>
-            <p className="mt-7 max-w-xl text-base leading-7 text-ivory/60">Follow an unknown vehicle from first observation to verified pattern. Each encounter enriches the network and gives operators a clearer picture of activity around critical assets.</p>
+            <h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Track repeat activity across sites.</h2>
+            <p className="mt-7 max-w-xl text-base leading-7 text-ivory/60">Kosham links each sighting to the same entity record. Operators can see where a vehicle appeared, when it returned, and which sites it approached.</p>
           </div>
 
           <div className="border border-white/15 bg-night/70 p-4 shadow-2xl shadow-black/20 backdrop-blur sm:p-6">
@@ -141,7 +141,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-8 lg:grid-cols-2">
             <div><p className="eyebrow text-deep"><span className="h-px w-8 bg-night" /> Five layers. One system.</p><h2 className="mt-7 max-w-2xl text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Every layer.<br />One mission.</h2></div>
-            <p className="max-w-lg self-end text-base leading-7 text-deep/65 lg:justify-self-end">Kosham connects the physical and digital layers of security into a single architecture—from the first sensor observation to the operational decision.</p>
+            <p className="max-w-lg self-end text-base leading-7 text-deep/65 lg:justify-self-end">The five layers connect the sensor in the field to the operator making the decision.</p>
           </div>
           <div className="mt-20 border-t border-night/20">
             {layers.map((layer) => (
@@ -163,8 +163,8 @@ export default function Home() {
           <div className="relative mt-14 grid gap-16 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
             <div>
               <p className="eyebrow text-deep"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Built for India</p>
-              <h2 className="editorial-display mt-7 text-5xl leading-[.98] tracking-[-0.045em] sm:text-7xl">Indian in construction.<br /><span className="text-deep/45">Global in execution.</span></h2>
-              <p className="mt-8 max-w-xl text-base leading-7 text-deep/68">Built for India’s infrastructure, terrain, and operating realities—from dense industrial corridors to distributed critical sites and sovereign networks.</p>
+              <h2 className="editorial-display mt-7 text-5xl leading-[.98] tracking-[-0.045em] sm:text-7xl">Designed for<br /><span className="text-deep/45">Indian conditions.</span></h2>
+              <p className="mt-8 max-w-xl text-base leading-7 text-deep/68">Deployments may span industrial corridors, dense cities, remote terrain, and disconnected networks. Kosham is designed for that range.</p>
             </div>
             <div className="relative flex min-h-[430px] items-center justify-center border border-night/15 bg-[#cfb48f] p-8">
               <div className="absolute inset-5 border border-night/10" />
@@ -185,10 +185,10 @@ export default function Home() {
         <div className="absolute left-1/2 top-1/2 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 rotate-45 border border-signal/10" />
         <div className="absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rotate-45 border border-gold/10" />
         <div className="relative mx-auto max-w-5xl text-center">
-          <p className="eyebrow justify-center"><span className="h-px w-8 bg-gold" /> कोशम् · Built for sovereign capability</p>
-          <h2 className="mt-8 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.055em] sm:text-7xl">A unified intelligence layer for the physical world.</h2>
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-ivory/58">Built for India’s institutions and essential infrastructure—and designed to turn fragmented observations into one trusted operational picture.</p>
-          <a className="mt-10 inline-block bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.15em] text-night transition hover:bg-sandstone" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Start a conversation <span aria-hidden="true">↗</span></a>
+          <p className="eyebrow justify-center"><span className="h-px w-8 bg-gold" /> कोशम् · A system India controls</p>
+          <h2 className="mt-8 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.055em] sm:text-7xl">One operating picture across sites, sensors, and systems.</h2>
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-ivory/58">Kosham gives institutions a shared record of what was seen, where it moved, and how events connect.</p>
+          <a className="mt-10 inline-block bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.15em] text-night transition hover:bg-sandstone" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Talk to us <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 

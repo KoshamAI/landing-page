@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kosham — Perimeter Intelligence for the Physical World",
+  title: "Kosham | Perimeter Intelligence for the Physical World",
   description: "Kosham turns distributed sensors into a persistent intelligence network for critical infrastructure.",
 };
 

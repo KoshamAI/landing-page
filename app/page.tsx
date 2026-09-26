@@ -1,4 +1,5 @@
 import SystemLayers from "./components/system-layers";
+import BriefingForm from "./components/briefing-form";
 
 const communityOutcomes = [
   { number: "01", title: "Detect earlier", detail: "Identify repeat perimeter activity before it becomes an incident." },
@@ -59,16 +60,16 @@ export default function Home() {
             <a className="transition hover:text-ivory" href="#capabilities">Capabilities</a>
             <a className="transition hover:text-ivory" href="#mission">Mission</a>
           </div>
-          <a className="border border-ivory/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] transition hover:border-signal hover:bg-signal hover:text-night" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Request briefing</a>
+          <a className="border border-ivory/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] transition hover:border-signal hover:bg-signal hover:text-night" href="#briefing">Request a Briefing</a>
         </nav>
 
         <div className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] max-w-[1440px] items-center gap-10 px-6 pb-16 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-16">
           <div className="max-w-3xl pt-16 lg:pt-0">
             <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Perimeter intelligence</p>
-            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Understand what&apos;s moving around <span className="text-sandstone">your critical assets.</span></h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham links observations across cameras, sensors, and locations so teams can track vehicles, identify repeat activity, and investigate across sites.</p>
+            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Understand what&apos;s moving around <span className="text-sandstone">your critical sites.</span></h1>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham provides sensors and software designed to work together. Compatible infrastructure already in place can connect to the same system. Teams can track vehicles, identify repeat activity, and investigate across sites.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Request a briefing <span aria-hidden="true">↗</span></a>
+              <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="#briefing">Request a Briefing</a>
               <a className="border border-white/20 px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition hover:border-white/60" href="#platform">Explore the system <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -85,39 +86,9 @@ export default function Home() {
           <p className="eyebrow text-deep"><span className="h-px w-8 bg-gold" /> From observation to action</p>
           <div className="mt-8 grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
             <h2 className="max-w-4xl text-4xl font-medium leading-[1.06] tracking-[-0.045em] sm:text-6xl">Cameras record events.<br />Kosham builds <span className="text-deep/45">understanding.</span></h2>
-            <p className="max-w-lg text-base leading-7 text-deep/65">Most camera footage is isolated by site and timestamp. Kosham links repeat observations so teams can trace vehicles, find associations, and review activity outside the gate.</p>
+            <p className="max-w-lg text-base leading-7 text-deep/65">Security teams see fragments: a vehicle on one camera, a plate at another gate, and an incident in a separate system. Kosham connects those observations into a shared picture so teams can identify patterns, investigate across locations, and respond with context.</p>
           </div>
 
-          <div className="mt-20 grid gap-10 bg-deep p-6 text-ivory sm:p-10 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
-            <div>
-              <p className="eyebrow"><span className="h-1.5 w-1.5 bg-signal" /> One entity. Every encounter.</p>
-              <h3 className="mt-6 text-3xl font-medium leading-[1.08] tracking-[-0.04em] sm:text-4xl">Track repeat activity across sites.</h3>
-              <p className="mt-5 max-w-lg text-sm leading-6 text-ivory/58">Kosham links each sighting to the same entity record. Operators can see where a vehicle appeared, when it returned, and which sites it approached.</p>
-            </div>
-            <div className="border border-white/15 bg-night/70 p-4 sm:p-5">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4 text-[10px] uppercase tracking-[0.18em] text-ivory/40"><span>Entity / VEH-2741</span><span className="flex items-center gap-2 text-signal"><span className="h-1.5 w-1.5 rounded-full bg-signal" /> Live network</span></div>
-              <div className="mt-4 grid gap-4 sm:grid-cols-[.85fr_1.15fr]">
-                <div className="border border-white/10 bg-white/[.035] p-4">
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-ivory/35">Registration</p>
-                  <p className="mt-2 text-xl font-medium">MH 04 XX 2741</p>
-                  <div className="mt-6 space-y-4 text-xs">
-                    <div><p className="text-ivory/35">First observed</p><p className="mt-1 text-ivory/80">SITE 04 · 02:14 IST</p></div>
-                    <div><p className="text-ivory/35">Network encounters</p><p className="mt-1 text-ivory/80">07 across 03 locations</p></div>
-                    <div><p className="text-ivory/35">Pattern</p><p className="mt-1 text-gold">Repeat perimeter activity</p></div>
-                  </div>
-                </div>
-                <div className="relative min-h-64 overflow-hidden border border-white/10 bg-[#111a2d]">
-                  <div className="absolute inset-0 bg-map-grid opacity-50" />
-                  <svg className="absolute inset-0 h-full w-full" viewBox="0 0 420 300" fill="none" aria-hidden="true">
-                    <path d="M26 240C86 208 96 85 169 102c72 18 77 115 142 94 38-12 43-56 84-73" stroke="#7297FF" strokeWidth="1.4" strokeDasharray="5 6" opacity=".8" />
-                    <path d="M52 40c74 42 115 8 174 48 49 33 47 94 151 149" stroke="#D8C3A5" strokeWidth=".8" opacity=".25" />
-                    {[[26,240],[169,102],[311,196],[395,123]].map(([x,y], i) => <g key={i}><circle cx={x} cy={y} r="10" fill="#7297FF" opacity=".13" /><circle cx={x} cy={y} r="3" fill="#7297FF" /></g>)}
-                  </svg>
-                  <div className="absolute bottom-4 left-4 border border-white/10 bg-night/80 px-3 py-2 text-[9px] uppercase tracking-[.16em] text-ivory/50">Cross-site path resolved</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -173,16 +144,16 @@ export default function Home() {
 
       <footer className="border-t border-white/10 px-6 pb-10 pt-20 sm:px-10 lg:px-16">
         <div className="mx-auto max-w-[1320px]">
-          <div className="grid gap-8 border-b border-white/10 pb-20 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div id="briefing" className="grid scroll-mt-8 gap-10 border-b border-white/10 pb-20 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
             <div>
               <p className="flex items-center gap-3 text-sandstone/70"><span className="h-px w-8 bg-gold" /><span className="indic-display tracking-normal">कोशम्</span></p>
               <h2 className="mt-6 max-w-4xl text-4xl font-medium leading-[1.04] tracking-[-0.045em] sm:text-6xl">A unified intelligence layer for the physical world.</h2>
             </div>
-            <a className="inline-block bg-gold px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.15em] text-night transition hover:bg-sandstone" href="mailto:hello@kosham.ai?subject=Kosham%20briefing">Talk to us <span aria-hidden="true">↗</span></a>
+            <BriefingForm />
           </div>
           <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div><KoshamMark compact /><p className="mt-4 max-w-sm text-xs leading-5 text-ivory/35">Perimeter intelligence for the physical world.</p></div>
-          <div className="text-left text-[10px] uppercase tracking-[0.18em] text-ivory/35 sm:text-right"><a className="transition hover:text-ivory" href="mailto:hello@kosham.ai">hello@kosham.ai</a><p className="mt-2">© {new Date().getFullYear()} Kosham Technologies</p></div>
+          <div className="text-left text-[10px] uppercase tracking-[0.18em] text-ivory/35 sm:text-right"><a className="transition hover:text-ivory" href="mailto:hi@kosham.ai">hi@kosham.ai</a><p className="mt-2">© {new Date().getFullYear()} Kosham Technologies</p></div>
           </div>
         </div>
       </footer>

@@ -4,10 +4,10 @@ import { useState } from "react";
 
 const stages = [
   {
-    name: "Assets",
-    label: "What exists",
-    title: "Connect the physical assets already in the field.",
-    detail: "Bring cameras, sensors, vehicles, and installations into one system while keeping the infrastructure already in place.",
+    name: "Sensors",
+    label: "What is deployed",
+    title: "Deploy a connected sensor network.",
+    detail: "Kosham provides cameras and other sensors built for the platform, along with the edge devices and gateways that connect them. Compatible existing feeds can join the same network.",
   },
   {
     name: "Perception",
@@ -18,14 +18,14 @@ const stages = [
   {
     name: "Networks",
     label: "What connects",
-    title: "Link observations across sites and systems.",
-    detail: "Move beyond isolated camera feeds. Kosham connects observations across locations so activity can be followed beyond a single gate.",
+    title: "Track repeat activity across sites.",
+    detail: "Kosham links observations across locations and systems so operators can see where a vehicle appeared, when it returned, and which sites it approached.",
   },
   {
     name: "Intelligence",
     label: "What it means",
     title: "Connect each observation to the entity behind it.",
-    detail: "An ontology links vehicles, sites, organizations, routes, and events so operators can connect a detection to prior sightings and related records.",
+    detail: "An ontology links vehicles, sites, organizations, routes, and events so operators can trace relationships between detections and the records connected to them.",
   },
   {
     name: "Investigate",
@@ -35,14 +35,14 @@ const stages = [
   },
 ];
 
-function AssetsVisual() {
+function SensorsVisual() {
   return (
     <div className="grid h-full min-h-[390px] grid-cols-2 gap-3">
       {[
         ["CAM-042", "East perimeter", "Online"],
         ["ANPR-018", "Gate 02", "Online"],
         ["RADAR-006", "North approach", "Online"],
-        ["VEH-2741", "Mobile asset", "Observed"],
+        ["EDGE-012", "Site 11", "Online"],
       ].map(([id, location, status], index) => (
         <div className="relative flex min-h-44 flex-col justify-between overflow-hidden border border-white/12 bg-night p-5" key={id}>
           <div className="absolute right-0 top-0 h-24 w-24 translate-x-1/2 -translate-y-1/2 rotate-45 border border-signal/15" />
@@ -163,7 +163,7 @@ function InvestigateVisual() {
   );
 }
 
-const visuals = [AssetsVisual, PerceptionVisual, NetworksVisual, IntelligenceVisual, InvestigateVisual];
+const visuals = [SensorsVisual, PerceptionVisual, NetworksVisual, IntelligenceVisual, InvestigateVisual];
 
 export default function SystemLayers() {
   const [active, setActive] = useState(0);

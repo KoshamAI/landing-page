@@ -175,7 +175,7 @@ export default function SystemLayers() {
       <div className="absolute inset-0 bg-topography opacity-[.05]" />
       <div className="relative mx-auto max-w-[1320px]">
         <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
-          <div><p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> One connected system</p><h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">From sensors to investigation.</h2></div>
+          <h2 className="text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">From sensors to investigation.</h2>
           <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Five layers turn distributed observations into linked records that operators can search, trace, and verify.</p>
         </div>
 
@@ -193,7 +193,7 @@ export default function SystemLayers() {
 
         <div className="mt-8 grid h-[820px] grid-rows-[368px_420px] gap-8 lg:h-[520px] lg:grid-cols-[.62fr_1.38fr] lg:grid-rows-1 lg:items-stretch">
           <div className="flex h-full flex-col justify-between overflow-hidden border border-white/12 bg-white/[.025] p-7 sm:p-9">
-            <div><p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">{stage.label}</p><h3 className="mt-6 text-3xl font-medium leading-[1.08] tracking-[-0.04em] sm:text-4xl">{stage.title}</h3><p className="mt-6 text-sm leading-7 text-ivory/58">{stage.detail}</p></div>
+            <div><p className="text-sm font-medium text-gold">{stage.label}</p><h3 className="mt-4 text-3xl font-medium leading-[1.08] tracking-[-0.04em] sm:text-4xl">{stage.title}</h3><p className="mt-6 text-sm leading-7 text-ivory/58">{stage.detail}</p></div>
           </div>
           <div className="h-full overflow-hidden" role="tabpanel" aria-label={`${stage.name} layer`}><ActiveVisual /></div>
         </div>

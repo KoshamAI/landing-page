@@ -19,17 +19,16 @@ export default function BriefingForm() {
 
   return (
     <form className="border border-white/12 bg-white/[.025] p-6 sm:p-8" onSubmit={handleSubmit}>
-      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">Request a Briefing</p>
-      <div className="mt-6 grid gap-5 sm:grid-cols-2">
-        <label className="text-[10px] font-bold uppercase tracking-[0.16em] text-ivory/45">
+      <div className="grid gap-5 sm:grid-cols-2">
+        <label className="text-sm font-medium text-ivory/60">
           Name
           <input className={inputClass} name="name" type="text" autoComplete="name" required />
         </label>
-        <label className="text-[10px] font-bold uppercase tracking-[0.16em] text-ivory/45">
+        <label className="text-sm font-medium text-ivory/60">
           Company
           <input className={inputClass} name="company" type="text" autoComplete="organization" required />
         </label>
-        <label className="text-[10px] font-bold uppercase tracking-[0.16em] text-ivory/45 sm:col-span-2">
+        <label className="text-sm font-medium text-ivory/60 sm:col-span-2">
           Work email
           <input className={inputClass} name="email" type="email" autoComplete="email" inputMode="email" required />
         </label>

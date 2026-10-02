@@ -65,26 +65,24 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] max-w-[1440px] items-center gap-10 px-6 pb-16 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-16">
           <div className="max-w-3xl pt-16 lg:pt-0">
-            <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Perimeter intelligence</p>
-            <h1 className="mt-7 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Understand what&apos;s moving around <span className="text-sandstone">your critical sites.</span></h1>
+            <h1 className="text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Understand what&apos;s moving around <span className="text-sandstone">your critical sites.</span></h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham provides sensors and software designed to work together. Compatible infrastructure already in place can connect to the same system. Teams can track vehicles, identify repeat activity, and investigate across sites.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="#briefing">Request a Briefing</a>
-              <a className="border border-white/20 px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition hover:border-white/60" href="#platform">Explore the system <span aria-hidden="true">↓</span></a>
+              <a className="border border-white/20 px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition hover:border-white/60" href="#platform">How Kosham works</a>
             </div>
           </div>
           <div className="flex justify-center lg:justify-end"><LayeredCore /></div>
         </div>
 
-        <div className="relative z-10 mx-auto flex max-w-[1440px] flex-wrap justify-between gap-5 border-t border-white/10 px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-ivory/40 sm:px-10 lg:px-16">
+        <div className="relative z-10 mx-auto flex max-w-[1440px] flex-wrap justify-between gap-5 border-t border-white/10 px-6 py-5 text-xs tracking-[-0.01em] text-ivory/40 sm:px-10 lg:px-16">
           <span>Physical world intelligence</span><span>Built for India</span>
         </div>
       </section>
 
       <section id="platform" className="border-b border-night/10 bg-ivory px-6 py-24 text-night sm:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto max-w-[1320px]">
-          <p className="eyebrow text-deep"><span className="h-px w-8 bg-gold" /> From observation to action</p>
-          <div className="mt-8 grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
+          <div className="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
             <h2 className="max-w-4xl text-4xl font-medium leading-[1.06] tracking-[-0.045em] sm:text-6xl">Cameras record events.<br />Kosham builds <span className="text-deep/45">understanding.</span></h2>
             <p className="max-w-lg text-base leading-7 text-deep/65">Security teams see fragments: a vehicle on one camera, a plate at another gate, and an incident in a separate system. Kosham connects those observations into a shared picture so teams can identify patterns, investigate across locations, and respond with context.</p>
           </div>
@@ -99,11 +97,10 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px]">
           <div className="relative grid min-h-[520px] overflow-hidden border border-night/15 bg-ivory lg:grid-cols-[1fr_.9fr] lg:items-stretch">
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
-              <p className="eyebrow text-deep"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Built for India</p>
-              <h2 className="editorial-display mt-6 text-5xl leading-[1.02] tracking-[-0.05em] sm:text-6xl">Designed for India.</h2>
+              <h2 className="editorial-display text-5xl leading-[1.02] tracking-[-0.05em] sm:text-6xl">Designed for India.</h2>
               <p className="mt-7 max-w-xl text-base leading-7 text-deep/68">Deployments may span industrial corridors, dense cities, remote terrain, and disconnected networks. Kosham is built to operate across them.</p>
               <div className="mt-10 border-t border-night/15 pt-8">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">Built for sovereign capability</p>
+                <p className="text-sm font-semibold text-gold">Built for sovereign capability</p>
                 <p className="mt-4 max-w-xl text-lg leading-7 text-deep/75">Technology developed for India&apos;s security requirements, infrastructure, and operating environment.</p>
               </div>
             </div>
@@ -113,7 +110,7 @@ export default function Home() {
               <div className="relative text-center">
                 <p className="indic-display text-[clamp(2.8rem,5vw,5.3rem)] font-medium leading-none tracking-[-0.055em]">सत्यमेव जयते</p>
                 <div className="mx-auto my-6 flex max-w-xs items-center gap-4"><span className="h-px flex-1 bg-night/30" /><span className="h-3 w-3 rotate-45 border border-night/50" /><span className="h-px flex-1 bg-night/30" /></div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-deep/55">Truth alone triumphs</p>
+                <p className="text-xs font-medium tracking-[0.04em] text-deep/55">Truth alone triumphs</p>
               </div>
             </div>
           </div>
@@ -125,10 +122,9 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
             <div>
-              <p className="eyebrow"><span className="h-1.5 w-1.5 rotate-45 bg-gold" /> Safer communities</p>
-              <h2 className="mt-7 text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Security does not stop at the perimeter.</h2>
+              <h2 className="text-4xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">Security does not stop at the perimeter.</h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Critical sites do not operate in isolation. Better perimeter awareness helps teams respond sooner, preserve evidence, and coordinate with nearby sites and response teams.</p>
+            <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Critical sites do not operate in isolation. Better perimeter awareness helps teams respond sooner, preserve evidence, coordinate with nearby sites and response teams, and keep the communities around them safer.</p>
           </div>
           <div className="mt-16 grid gap-px border border-white/10 bg-white/10 md:grid-cols-3">
             {communityOutcomes.map((outcome) => (

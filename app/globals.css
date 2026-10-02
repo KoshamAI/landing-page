@@ -9,7 +9,6 @@ body { margin: 0; background: #10182b; font-family: Inter, "Avenir Next", Avenir
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
-  .eyebrow { @apply flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.22em] text-ivory/50; }
   .bg-grid {
     background-image: linear-gradient(rgba(244,240,231,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(244,240,231,.035) 1px, transparent 1px);
     background-size: 64px 64px;

@@ -44,13 +44,16 @@ function LayeredCore() {
 
 export default function Home() {
   return (
-    <main className="bg-night text-ivory">
-      <section id="top" className="relative min-h-screen overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-signal/10 blur-[140px]" />
+    <main className="overflow-clip bg-night text-ivory">
+      <section id="top" className="group/hero hero-section relative min-h-[900px] overflow-hidden border-b border-white/10">
+        <div className="hero-photo absolute inset-0" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,14,27,.96)_0%,rgba(8,14,27,.83)_38%,rgba(8,14,27,.25)_72%,rgba(8,14,27,.48)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,14,27,.72)_0%,transparent_28%,rgba(8,14,27,.12)_58%,#10182b_100%)]" />
+        <div className="absolute inset-0 bg-grid opacity-15" />
+        <div className="absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-signal/15 blur-[140px]" />
         <div className="absolute -right-28 -top-20 h-96 w-96 rounded-full bg-gold/10 blur-[150px]" />
 
-        <nav className="relative z-10 mx-auto flex max-w-[1440px] items-center justify-between px-6 py-6 sm:px-10 lg:px-16" aria-label="Primary navigation">
+        <nav className="site-nav fixed inset-x-4 top-4 z-50 mx-auto flex max-w-[1320px] items-center justify-between rounded-[1.15rem] border border-white/15 px-4 py-3 sm:inset-x-6 sm:px-5" aria-label="Primary navigation">
           <div className="flex items-center">
             <a href="#top" className="text-ivory"><KoshamMark /></a>
             <span className="indic-display ml-5 hidden border-l border-white/15 pl-5 text-sm text-sandstone/70 sm:block">कोशम्</span>
@@ -60,27 +63,30 @@ export default function Home() {
             <a className="transition hover:text-ivory" href="#capabilities">Capabilities</a>
             <a className="transition hover:text-ivory" href="#mission">Mission</a>
           </div>
-          <a className="border border-ivory/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] transition hover:border-signal hover:bg-signal hover:text-night" href="#briefing">Request a Briefing</a>
+          <a className="rounded-lg bg-ivory px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-night transition hover:bg-sandstone" href="#briefing">Request a Briefing</a>
         </nav>
 
-        <div className="relative z-10 mx-auto grid min-h-[calc(100vh-96px)] max-w-[1440px] items-center gap-10 px-6 pb-16 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-16">
-          <div className="max-w-3xl pt-16 lg:pt-0">
+        <div className="relative z-10 mx-auto grid min-h-[850px] max-w-[1440px] items-center gap-10 px-6 pb-32 pt-36 sm:px-10 lg:grid-cols-[1.05fr_.95fr] lg:px-16 lg:pt-28">
+          <div className="max-w-3xl">
             <h1 className="text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Understand what&apos;s moving around <span className="text-sandstone">your critical sites.</span></h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham provides sensors and software designed to work together. Compatible infrastructure already in place can connect to the same system. Teams can track vehicles, identify repeat activity, and investigate across sites.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a className="bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-night transition hover:bg-signal" href="#briefing">Request a Briefing</a>
-              <a className="border border-white/20 px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition hover:border-white/60" href="#platform">How Kosham works</a>
+              <a className="rounded-lg bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-night transition hover:bg-sandstone" href="#briefing">Request a Briefing</a>
+              <a className="rounded-lg border border-white/25 bg-white/[.06] px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] backdrop-blur-md transition hover:border-white/60 hover:bg-white/[.1]" href="#platform">How Kosham works</a>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end"><LayeredCore /></div>
+          <div className="flex justify-center lg:justify-end">
+            <div className="core-glass relative w-full max-w-[620px] overflow-hidden rounded-[2rem] border border-white/15 bg-night/35 p-4 shadow-[0_35px_100px_rgba(0,0,0,.45)] backdrop-blur-md sm:p-7"><LayeredCore /></div>
+          </div>
         </div>
 
-        <div className="relative z-10 mx-auto flex max-w-[1440px] flex-wrap justify-between gap-5 border-t border-white/10 px-6 py-5 text-xs tracking-[-0.01em] text-ivory/40 sm:px-10 lg:px-16">
+        <div className="absolute inset-x-0 bottom-0 z-10 mx-auto flex max-w-[1440px] flex-wrap justify-between gap-5 border-t border-white/10 bg-night/25 px-6 py-5 text-xs tracking-[-0.01em] text-ivory/50 backdrop-blur-md sm:px-10 lg:px-16">
           <span>Physical world intelligence</span><span>Built for India</span>
         </div>
       </section>
 
-      <section id="platform" className="border-b border-night/10 bg-ivory px-6 py-24 text-night sm:px-10 lg:px-16 lg:py-28">
+      <section id="platform" className="relative border-b border-night/10 bg-ivory px-6 py-24 text-night sm:px-10 lg:px-16 lg:py-32">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
             <h2 className="max-w-4xl text-4xl font-medium leading-[1.06] tracking-[-0.045em] sm:text-6xl">Cameras record events.<br />Kosham builds <span className="text-deep/45">understanding.</span></h2>
@@ -95,7 +101,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-sandstone px-6 py-24 text-night sm:px-10 lg:px-16 lg:py-28">
         <div className="stepwell-corner bottom-0 right-0" aria-hidden="true" />
         <div className="mx-auto max-w-[1320px]">
-          <div className="relative grid min-h-[520px] overflow-hidden border border-night/15 bg-ivory lg:grid-cols-[1fr_.9fr] lg:items-stretch">
+          <div className="relative grid min-h-[520px] overflow-hidden rounded-[2rem] border border-night/15 bg-ivory shadow-[0_35px_100px_rgba(16,24,43,.16)] lg:grid-cols-[1fr_.9fr] lg:items-stretch">
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
               <h2 className="editorial-display text-5xl leading-[1.02] tracking-[-0.05em] sm:text-6xl">Designed for India.</h2>
               <p className="mt-7 max-w-xl text-base leading-7 text-deep/68">Deployments may span industrial corridors, dense cities, remote terrain, and disconnected networks. Kosham is built to operate across them.</p>
@@ -126,9 +132,9 @@ export default function Home() {
             </div>
             <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Critical sites do not operate in isolation. Better perimeter awareness helps teams respond sooner, preserve evidence, coordinate with nearby sites and response teams, and keep the communities around them safer.</p>
           </div>
-          <div className="mt-16 grid gap-px border border-white/10 bg-white/10 md:grid-cols-3">
+          <div className="mt-16 grid gap-4 md:grid-cols-3">
             {communityOutcomes.map((outcome) => (
-              <article className="bg-deep p-7 sm:p-9" key={outcome.title}>
+              <article className="glass-panel rounded-lg p-7 sm:p-9" key={outcome.title}>
                 <span className="text-[10px] font-bold tracking-[0.2em] text-gold">{outcome.number}</span>
                 <h3 className="mt-10 text-xl font-semibold tracking-[-0.03em]">{outcome.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-ivory/55">{outcome.detail}</p>
@@ -138,7 +144,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 px-6 pb-10 pt-20 sm:px-10 lg:px-16">
+      <footer className="relative border-t border-white/10 px-6 pb-10 pt-20 sm:px-10 lg:px-16">
+        <div className="absolute inset-x-0 top-0 h-56 bg-[radial-gradient(circle_at_50%_0%,rgba(114,151,255,.12),transparent_65%)]" />
         <div className="mx-auto max-w-[1320px]">
           <div id="briefing" className="grid scroll-mt-8 gap-10 border-b border-white/10 pb-20 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
             <div>

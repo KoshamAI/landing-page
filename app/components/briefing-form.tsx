@@ -15,10 +15,10 @@ export default function BriefingForm() {
     window.location.href = `mailto:hi@kosham.ai?subject=${subject}&body=${body}`;
   }
 
-  const inputClass = "mt-2 w-full border border-white/15 bg-white/[.035] px-4 py-3.5 text-sm text-ivory outline-none transition placeholder:text-ivory/25 focus:border-signal";
+  const inputClass = "mt-2 w-full rounded-xl border border-white/15 bg-white/[.045] px-4 py-3.5 text-sm text-ivory outline-none transition placeholder:text-ivory/25 focus:border-signal focus:bg-white/[.07]";
 
   return (
-    <form className="border border-white/12 bg-white/[.025] p-6 sm:p-8" onSubmit={handleSubmit}>
+    <form className="glass-panel rounded-[1.5rem] p-6 sm:p-8" onSubmit={handleSubmit}>
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm font-medium text-ivory/60">
           Name
@@ -33,7 +33,7 @@ export default function BriefingForm() {
           <input className={inputClass} name="email" type="email" autoComplete="email" inputMode="email" required />
         </label>
       </div>
-      <button className="mt-6 bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.15em] text-night transition hover:bg-sandstone" type="submit">Request a Briefing</button>
+      <button className="mt-6 rounded-lg bg-gold px-7 py-4 text-xs font-bold uppercase tracking-[0.13em] text-night transition hover:bg-sandstone" type="submit">Request a Briefing</button>
     </form>
   );
 }

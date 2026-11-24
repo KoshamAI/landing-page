@@ -7,6 +7,38 @@ body { margin: 0; background: #10182b; font-family: Inter, "Avenir Next", Avenir
 * { box-sizing: border-box; }
 ::selection { background: #7297ff; color: #10182b; }
 
+.site-nav {
+  background: linear-gradient(135deg, rgba(20, 30, 51, .78), rgba(10, 17, 31, .58));
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(255, 255, 255, .08);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+  backdrop-filter: blur(22px) saturate(135%);
+}
+
+.hero-photo {
+  /* Photo: Drone Master, Mumbai Coastal Road — https://unsplash.com/photos/B3ynlMGy9HI */
+  background-image: url('/hero-infrastructure.webp');
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.015);
+  animation: hero-settle 1.8s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.core-glass::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,.12), transparent 26%, transparent 70%, rgba(114,151,255,.08));
+}
+
+.glass-panel {
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.018));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 24px 70px rgba(0,0,0,.16);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .bg-grid {
@@ -51,7 +83,17 @@ body { margin: 0; background: #10182b; font-family: Inter, "Avenir Next", Avenir
   50% { opacity: 1; transform: scale(1.5); }
 }
 
+@keyframes hero-settle {
+  from { opacity: 0; transform: scale(1.06); }
+  to { opacity: 1; transform: scale(1.015); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .signal { animation: none; }
+  .hero-photo { animation: none; }
+}
+
+@media (max-width: 1023px) {
+  .hero-photo { background-position: 64% center; }
 }

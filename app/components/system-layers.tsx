@@ -44,7 +44,7 @@ function SensorsVisual() {
         ["RADAR-006", "North approach", "Online"],
         ["EDGE-012", "Site 11", "Online"],
       ].map(([id, location, status], index) => (
-        <div className="relative flex min-h-44 flex-col justify-between overflow-hidden border border-white/12 bg-night p-5" key={id}>
+        <div className="glass-panel relative flex min-h-44 flex-col justify-between overflow-hidden rounded-[1.25rem] p-5" key={id}>
           <div className="absolute right-0 top-0 h-24 w-24 translate-x-1/2 -translate-y-1/2 rotate-45 border border-signal/15" />
           <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-ivory/38"><span>0{index + 1}</span><span className="text-signal">{status}</span></div>
           <div><p className="text-2xl font-medium tracking-[-0.035em]">{id}</p><p className="mt-2 text-sm text-ivory/48">{location}</p></div>
@@ -57,7 +57,7 @@ function SensorsVisual() {
 
 function NetworksVisual() {
   return (
-    <div className="relative h-full min-h-[390px] overflow-hidden border border-white/12 bg-night">
+    <div className="glass-panel relative h-full min-h-[390px] overflow-hidden rounded-[1.5rem] bg-night/85">
       <div className="absolute inset-0 bg-map-grid opacity-35" />
       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 720 440" fill="none" role="img" aria-label="Vehicle observations shown as an intelligence overlay on a road map">
         <g stroke="#D8C3A5" strokeOpacity=".18" strokeWidth="5">
@@ -90,7 +90,7 @@ function NetworksVisual() {
 
 function PerceptionVisual() {
   return (
-    <div className="relative h-full min-h-[390px] overflow-hidden border border-white/12 bg-[#111a2d]">
+    <div className="glass-panel relative h-full min-h-[390px] overflow-hidden rounded-[1.5rem] bg-[#111a2d]/90">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-x-[12%] bottom-[13%] top-[12%] border border-white/8">
         <div className="absolute bottom-[18%] left-[13%] h-[31%] w-[43%] border-2 border-signal">
@@ -110,7 +110,7 @@ function PerceptionVisual() {
 
 function IntelligenceVisual() {
   return (
-    <div className="relative h-full min-h-[390px] overflow-hidden border border-white/12 bg-night p-4 sm:p-6">
+    <div className="glass-panel relative h-full min-h-[390px] overflow-hidden rounded-[1.5rem] bg-night/90 p-4 sm:p-6">
       <div className="flex items-center justify-between border-b border-white/10 pb-4 text-[9px] uppercase tracking-[0.18em] text-ivory/38"><span>Entity graph / MH 04 XX 2741</span><span className="text-signal">5 linked records</span></div>
       <svg className="mt-2 h-[calc(100%_-_44px)] w-full" viewBox="0 0 760 390" fill="none" role="img" aria-label="Vehicle registration MH 04 XX 2741 connected to sites, a route, an event, and an organization">
         <g stroke="#7297FF" strokeOpacity=".42" strokeWidth="1.3">
@@ -140,7 +140,7 @@ function IntelligenceVisual() {
 
 function InvestigateVisual() {
   return (
-    <div className="flex h-full min-h-[390px] flex-col overflow-hidden border border-white/12 bg-night p-4 sm:p-6">
+    <div className="glass-panel flex h-full min-h-[390px] flex-col overflow-hidden rounded-[1.5rem] bg-night/90 p-4 sm:p-6">
       <div className="flex items-center justify-between border-b border-white/10 pb-4 text-[9px] uppercase tracking-[0.18em] text-ivory/38"><span>Investigation workspace</span><span className="text-signal">Evidence linked</span></div>
       <div className="mt-4 border border-signal/35 bg-signal/[.06] px-5 py-4">
         <p className="text-[8px] uppercase tracking-[0.18em] text-signal">Query</p>
@@ -171,7 +171,7 @@ export default function SystemLayers() {
   const stage = stages[active];
 
   return (
-    <section id="capabilities" className="relative overflow-hidden border-b border-white/10 bg-deep px-6 py-24 text-ivory sm:px-10 lg:px-16 lg:py-28">
+    <section id="capabilities" className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_70%_20%,#1b2b50_0%,#14203a_34%,#13203a_70%)] px-6 py-24 text-ivory sm:px-10 lg:px-16 lg:py-32">
       <div className="absolute inset-0 bg-topography opacity-[.05]" />
       <div className="relative mx-auto max-w-[1320px]">
         <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
@@ -179,10 +179,10 @@ export default function SystemLayers() {
           <p className="max-w-xl text-base leading-7 text-ivory/60 lg:justify-self-end">Five layers turn distributed observations into linked records that operators can search, trace, and verify.</p>
         </div>
 
-        <div className="mt-14 overflow-x-auto border-y border-white/12" role="tablist" aria-label="Kosham system layers">
+        <div className="glass-panel mt-14 overflow-x-auto rounded-[1.5rem]" role="tablist" aria-label="Kosham system layers">
           <div className="grid min-w-[760px] grid-cols-5">
             {stages.map((item, index) => (
-              <button className={`relative border-r border-white/12 px-5 py-5 text-left transition last:border-r-0 ${active === index ? "bg-signal/[.1] text-ivory" : "text-ivory/38 hover:bg-white/[.03] hover:text-ivory/70"}`} key={item.name} onClick={() => setActive(index)} role="tab" aria-selected={active === index}>
+              <button className={`relative border-r border-white/10 px-5 py-5 text-left transition last:border-r-0 ${active === index ? "bg-signal/[.12] text-ivory" : "text-ivory/38 hover:bg-white/[.04] hover:text-ivory/70"}`} key={item.name} onClick={() => setActive(index)} role="tab" aria-selected={active === index}>
                 <span className={`text-[9px] font-bold tracking-[0.2em] ${active === index ? "text-signal" : "text-current"}`}>0{index + 1}</span>
                 <span className="mt-3 block text-base font-semibold tracking-[-0.025em]">{item.name}</span>
                 {active === index && <span className="absolute inset-x-0 bottom-0 h-0.5 bg-signal" />}
@@ -192,7 +192,7 @@ export default function SystemLayers() {
         </div>
 
         <div className="mt-8 grid h-[820px] grid-rows-[368px_420px] gap-8 lg:h-[520px] lg:grid-cols-[.62fr_1.38fr] lg:grid-rows-1 lg:items-stretch">
-          <div className="flex h-full flex-col justify-between overflow-hidden border border-white/12 bg-white/[.025] p-7 sm:p-9">
+          <div className="glass-panel flex h-full flex-col justify-between overflow-hidden rounded-[1.5rem] p-7 sm:p-9">
             <div><p className="text-sm font-medium text-gold">{stage.label}</p><h3 className="mt-4 text-3xl font-medium leading-[1.08] tracking-[-0.04em] sm:text-4xl">{stage.title}</h3><p className="mt-6 text-sm leading-7 text-ivory/58">{stage.detail}</p></div>
           </div>
           <div className="h-full overflow-hidden" role="tabpanel" aria-label={`${stage.name} layer`}><ActiveVisual /></div>

@@ -71,8 +71,8 @@ export default function Home() {
             <h1 className="text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] sm:text-7xl xl:text-[6.8rem]">Understand what&apos;s moving around <span className="text-sandstone">your critical sites.</span></h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/62 sm:text-xl">Kosham provides sensors and software designed to work together. Compatible infrastructure already in place can connect to the same system. Teams can track vehicles, identify repeat activity, and investigate across sites.</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a className="rounded-lg bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-night transition hover:bg-sandstone" href="#briefing">Request a Briefing</a>
-              <a className="rounded-lg border border-white/25 bg-white/[.06] px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] backdrop-blur-md transition hover:border-white/60 hover:bg-white/[.1]" href="#platform">How Kosham works</a>
+              <a className="flex items-center justify-center rounded-lg bg-ivory px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-night transition hover:bg-sandstone" href="#briefing">Request a Briefing</a>
+              <a className="flex items-center justify-center rounded-lg border border-white/25 bg-white/[.06] px-6 py-4 text-center text-xs font-bold uppercase tracking-[0.12em] backdrop-blur-md transition hover:border-white/60 hover:bg-white/[.1]" href="#platform">How Kosham works</a>
             </div>
           </div>
           <div className="flex justify-center lg:justify-end">

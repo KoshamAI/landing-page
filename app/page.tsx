@@ -9,14 +9,14 @@ const communityOutcomes = [
 
 function KoshamMark({ compact = false }: { compact?: boolean }) {
   return (
-    <span className="inline-flex items-center gap-3" aria-label="Kosham">
+    <span className="inline-flex items-center gap-3 leading-none" aria-label="Kosham">
       <svg className={compact ? "h-7 w-7" : "h-9 w-9"} viewBox="0 0 40 40" fill="none" aria-hidden="true">
         <path d="M20 2 38 20 20 38 2 20 20 2Z" stroke="currentColor" strokeWidth="1.2" />
         <path d="m20 7 13 13-13 13L7 20 20 7Z" stroke="currentColor" strokeWidth="1.2" opacity=".78" />
         <path d="m20 12 8 8-8 8-8-8 8-8Z" stroke="currentColor" strokeWidth="1.2" opacity=".56" />
         <path d="m20 16 4 4-4 4-4-4 4-4Z" fill="currentColor" />
       </svg>
-      <span className={compact ? "text-lg font-semibold tracking-[-0.04em]" : "text-xl font-semibold tracking-[-0.04em]"}>kosham</span>
+      <span className={compact ? "text-lg font-semibold leading-none tracking-[-0.04em]" : "text-xl font-semibold leading-none tracking-[-0.04em]"}>kosham</span>
     </span>
   );
 }
@@ -55,7 +55,7 @@ export default function Home() {
 
         <nav className="site-nav fixed inset-x-4 top-4 z-50 mx-auto flex max-w-[1320px] items-center justify-between rounded-[1.15rem] border border-white/15 px-4 py-3 sm:inset-x-6 sm:px-5" aria-label="Primary navigation">
           <div className="flex items-center">
-            <a href="#top" className="text-ivory"><KoshamMark /></a>
+            <a href="#top" className="flex items-center text-ivory"><KoshamMark /></a>
             <span className="indic-display ml-5 hidden border-l border-white/15 pl-5 text-sm text-sandstone/70 sm:block">कोशम्</span>
           </div>
           <div className="hidden items-center gap-8 text-xs font-medium uppercase tracking-[0.15em] text-ivory/55 md:flex">
